@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+</head>
+<body>
+    <audio id="background-music" src="music/relaxMusic.mp3" autoplay loop></audio>
+    <button class="soundButton" id="toggle-music">
+        <span id="icon-play"><ion-icon name="volume-mute-outline"></ion-icon></span>
+        <span id="icon-pause"><ion-icon name="volume-high-outline"></ion-icon></span>
+    </button>
+
+    <div class="background-image" id="image1"></div>
+    <div class="background-image" id="image2"></div>
+    <div class="background-image" id="image3"></div>
+    <div class="background-image" id="image4"></div>
+    <div class="background-image" id="image5"></div>
+    <div class="background-image" id="image6"></div>
+
+
+
+    <div class="container">
+        <div id="header">Minimalistic ToDo List</div>
+
+        <div id="newtask">
+            <input type="text" placeholder="Task to be done...">
+            <audio id="add-sound" src="music/addText.mp3"></audio>
+            <button id="push">Add</button>
+        </div>
+
+        <div id="tasks">
+            <audio id="delete-sound" src="music/deleteText.mp3"></audio>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
