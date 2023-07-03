@@ -14,6 +14,8 @@ body {
         #d161ff
     );
     font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    color: #525151;
 }
 
 .soundButton {
@@ -32,6 +34,15 @@ body {
 
 #icon-play {
     display: none;
+}
+
+#showDate {
+    position: absolute;
+    right: 2%;
+    bottom: 2%;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
 }
 
 .background-image {
@@ -191,6 +202,11 @@ body {
     padding-top: 5px;
 }
 
+.task button:hover {
+    color: #da9bf3;
+}
+
 .complete {
     text-decoration: line-through;
+    color: rgb(165, 161, 161);
 }

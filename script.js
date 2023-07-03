@@ -6,6 +6,17 @@ let backgroundImages = document.querySelectorAll('.background-image');
 let starsContainer = document.querySelector('body');
 let addSound = document.getElementById('add-sound');
 let deleteSound = document.getElementById('delete-sound');
+let showDate = document.getElementById("showDate");
+
+function updateDateTime() {
+    let currentDate = new Date();
+    let options = { year: "numeric", month: "long", day: "numeric"};
+    showDate.innerText = currentDate.toLocaleDateString("en-US", options);
+}
+
+setInterval(updateDateTime, 500);
+
+updateDateTime();
 
 toggleButton.addEventListener('click', function() {
     if (backgroundMusic.paused) {
@@ -22,8 +33,8 @@ toggleButton.addEventListener('click', function() {
 document.body.addEventListener('mousemove', function(event) {
     let mouseX = event.clientX;
     let mouseY = event.clientY;
-    let offsetX = -mouseX / window.innerWidth * 30;
-    let offsetY = -mouseY / window.innerHeight * 30;
+    let offsetX = -mouseX / window.innerWidth * 20;
+    let offsetY = -mouseY / window.innerHeight * 20;
 
     backgroundImages.forEach(function(image) {
         image.style.transform = 'translate(' + offsetX + 'px, ' + offsetY + 'px)';
